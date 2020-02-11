@@ -5,7 +5,7 @@ before_install:
 script:
 - docker build -t test-image .
 - docker run --name test-container -d test-image
-- docker exec --tty test-container env TERM=xterm molecule -v
+- docker exec --tty test-container env TERM=xterm molecule --version
 notifications:
   email:
     - sham1316@gmail.com
